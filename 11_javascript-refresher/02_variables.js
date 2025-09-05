@@ -1,4 +1,4 @@
-let name = "Maffia";
+let name = "Maffia khate";
 let age = 19;
 let isStudent = true;
 
