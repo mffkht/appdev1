@@ -3,44 +3,16 @@ import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
 
-function ProfileCard() {
-  const cardStyle = {
-    backgroundColor: "#ffe6f2", // light pastel pink
-    padding: "24px",
-    borderRadius: "16px",
-    textAlign: "center",
-    boxShadow: "0 4px 10px rgba(0,0,0,0.1)",
-    maxWidth: "280px",
-    margin: "40px auto",
-    fontFamily: "'Comic Sans MS', 'Poppins', sans-serif",
-  };
-
-  const nameStyle = {
-    color: "#ff66b2", // cute pink
-    fontSize: "22px",
-    fontWeight: "bold",
-    marginBottom: "8px",
-  };
-
-  const roleStyle = {
-    color: "#666",
-    fontSize: "16px",
-    marginTop: "0",
-  };
-
-  const avatarStyle = {
-    width: "80px",
-    height: "80px",
-    borderRadius: "50%",
-    marginBottom: "12px",
-    border: "3px solid #ffb3d9",
-  };
+function UserInfo() {
+  const name = "Maffia Khate";
+  const age = 19;
+  const hobbies = ["Watching Anime", "Reading", "Sleeping"];
 
   return (
-    <div style={cardStyle}>
-     
-      <h2 style={nameStyle}>🌸 Maffia Khate 🌸</h2>
-      <p style={roleStyle}>✨ Business Analyst ✨</p>
+    <div>
+      <h2>Hello, {name}!</h2>
+      <p>Age: {age}</p>
+      <p>Hobbies: {hobbies.join(", ")}</p>
     </div>
   );
 }
@@ -48,7 +20,7 @@ function ProfileCard() {
 function App() {
   return (
     <div>
-      <ProfileCard />
+      <UserInfo />
     </div>
   );
 }
