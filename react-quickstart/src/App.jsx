@@ -3,16 +3,14 @@ import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
 
-function UserInfo() {
-  const name = "Maffia Khate";
-  const age = 19;
-  const hobbies = ["Watching Anime", "Reading", "Sleeping"];
-
+function Greeting({ isLoggedIn }) {
   return (
     <div>
-      <h2>Hello, {name}!</h2>
-      <p>Age: {age}</p>
-      <p>Hobbies: {hobbies.join(", ")}</p>
+      {isLoggedIn ? (
+        <h2>Welcome back, Maffia Khate!</h2>
+      ) : (
+        <h2>Please log in to continue.</h2>
+      )}
     </div>
   );
 }
@@ -20,11 +18,13 @@ function UserInfo() {
 function App() {
   return (
     <div>
-      <UserInfo />
+      <Greeting isLoggedIn={true} />
+      <Greeting isLoggedIn={false} />
     </div>
   );
 }
 
 export default App;
+
 
 
