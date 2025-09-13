@@ -3,16 +3,15 @@ import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
 
-
-function Greeting() {
-  return <h1>Hello, World!</h1>;
-}
-
-function UserInfo() {
+function AboutMe() {
   return (
     <div>
-      <p>Name: Pia</p>
-      <p>Role: Business Analyst</p>
+      <h1>About Me</h1>
+     
+      <ul>
+        <li>Reading</li>
+        <li>Watching Anime</li>
+      </ul>
     </div>
   );
 }
@@ -20,10 +19,10 @@ function UserInfo() {
 function App() {
   return (
     <div>
-      <Greeting />
-      <UserInfo />
+      <AboutMe />
     </div>
   );
 }
 
 export default App;
+
