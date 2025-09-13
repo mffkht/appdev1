@@ -3,14 +3,17 @@ import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
 
-function Greeting({ isLoggedIn }) {
+function TodoList() {
+  const tasks = ["Learn React", "Practice Coding", "Read a Book", "Watching Anime", "Gaming"];
+
   return (
     <div>
-      {isLoggedIn ? (
-        <h2>Welcome back, Maffia Khate!</h2>
-      ) : (
-        <h2>Please log in to continue.</h2>
-      )}
+      <h2>My Tasks</h2>
+      <ul>
+        {tasks.map((task, index) => (
+          <li key={index}>{task}</li>  
+        ))}
+      </ul>
     </div>
   );
 }
@@ -18,8 +21,7 @@ function Greeting({ isLoggedIn }) {
 function App() {
   return (
     <div>
-      <Greeting isLoggedIn={true} />
-      <Greeting isLoggedIn={false} />
+      <TodoList />
     </div>
   );
 }
