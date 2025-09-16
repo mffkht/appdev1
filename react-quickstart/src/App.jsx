@@ -3,28 +3,21 @@ import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
 
-function ButtonClick() {
-  function handleClick() {
-    alert("Button was clicked!");
-  }
-
-  return (
-    <div>
-      <h2>Click the Button</h2>
-      <button onClick={handleClick}>Click Me</button>
-    </div>
-  );
-}
+// App.jsx
+import { useState } from "react";
+import './App.css';
 
 function App() {
+  // create state variable "count" with default value 0
+  const [count, setCount] = useState(0);
+
   return (
     <div>
-      <ButtonClick />
+      <h2>Count: {count}</h2>
+      <button onClick={() => setCount(count + 1)}>+ Add</button>
+      <button onClick={() => setCount(count - 1)}>- Subtract</button>
     </div>
   );
 }
 
 export default App;
-
-
-
