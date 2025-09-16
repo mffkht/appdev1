@@ -3,17 +3,15 @@ import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
 
-function TodoList() {
-  const tasks = ["Learn React", "Practice Coding", "Read a Book", "Watching Anime", "Gaming"];
+function ButtonClick() {
+  function handleClick() {
+    alert("Button was clicked!");
+  }
 
   return (
     <div>
-      <h2>My Tasks</h2>
-      <ul>
-        {tasks.map((task, index) => (
-          <li key={index}>{task}</li>  
-        ))}
-      </ul>
+      <h2>Click the Button</h2>
+      <button onClick={handleClick}>Click Me</button>
     </div>
   );
 }
@@ -21,7 +19,7 @@ function TodoList() {
 function App() {
   return (
     <div>
-      <TodoList />
+      <ButtonClick />
     </div>
   );
 }
