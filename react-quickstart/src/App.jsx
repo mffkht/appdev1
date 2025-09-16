@@ -4,16 +4,18 @@ import viteLogo from '/vite.svg'
 import './App.css'
 
 
-function App() {
-  const [count, setCount] = useState(0);
+function WelcomeMessage({ name }) {
+  return <h2>Hello, {name}!</h2>;
+}
 
+function App() {
   return (
     <div>
-      <h2>Count: {count}</h2>
-      <button onClick={() => setCount(count + 1)}>+ Add</button>
-      <button onClick={() => setCount(count - 1)}>- Subtract</button>
+      <WelcomeMessage name="Maffia Khate" />
+      <WelcomeMessage name="Euan Flyn" />
     </div>
   );
 }
 
 export default App;
+
