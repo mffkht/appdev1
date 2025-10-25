@@ -4,29 +4,14 @@ import viteLogo from '/vite.svg'
 import './App.css'
 
 
-const person = {
-  name: 'Gregorio Y. Zara',
-  theme: {
-    backgroundColor: 'black',
-    color: 'pink'
-  }
-};
+import Profile from "./components/Profile.jsx";
 
-export default function TodoList() {
+export default function App() {
   return (
-    <div style={person.theme}>
-      <h1>{person.name}'s Todos</h1>
-      <img
-        className="avatar"
-        src="https://i.imgur.com/7vQD0fPs.jpg"
-        alt="Gregorio Y. Zara"
-      />
-      <ul>
-        <li>Improve the videophone</li>
-        <li>Prepare aeronautics lectures</li>
-        <li>Work on the alcohol-fuelled engine</li>
-      </ul>
-    </div>
+    <main>
+      <h1>React Props Example</h1>
+      <Profile />
+    </main>
   );
 }
 
