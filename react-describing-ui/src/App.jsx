@@ -3,10 +3,14 @@ import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
 
-import TeaSetPure from './components/TeaSetPure.jsx';
+import RootComponent from './components/tree/RootComponent.jsx';
 
 export default function App() {
-  return <TeaSetPure />;
+  return (
+    <main>
+      <RootComponent />
+    </main>
+  );
 }
 
 
