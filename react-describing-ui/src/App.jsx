@@ -4,22 +4,13 @@ import viteLogo from '/vite.svg'
 import './App.css'
 
 
-function Profile() {
+import Gallery from './components/Gallery.jsx';
+
+export default function App() {
   return (
-    <img
-      src="https://i.imgur.com/MK3eW3As.jpg"
-      alt="Katherine Johnson"
-    />
+    <main>
+      <Gallery />
+    </main>
   );
 }
 
-export default function Gallery() {
-  return (
-    <section>
-      <h1>Amazing scientists</h1>
-      <Profile />
-      <Profile />
-      <Profile />
-    </section>
-  );
-}
