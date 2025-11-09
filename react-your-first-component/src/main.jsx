@@ -1,10 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import Profile from './App.jsx'; // ✅ imports your Profile component
+import Gallery from './App.jsx'; // ✅ importing Gallery (the default export)
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <Profile />
+    <Gallery />
   </React.StrictMode>,
 );
-
