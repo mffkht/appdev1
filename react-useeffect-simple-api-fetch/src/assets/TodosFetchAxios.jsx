@@ -1,4 +1,3 @@
-// src/TodosFetchAxios.jsx
 import { useState, useEffect } from "react";
 import axios from "axios";
 
@@ -15,23 +14,21 @@ export default function TodosFetchAxios() {
         setLoading(false);
       })
       .catch((err) => {
-        setError(err.message || "Error fetching todos");
+        setError("Failed to fetch todos");
         setLoading(false);
       });
   }, []);
 
-  if (loading) return <h3>Loading todos...</h3>;
-  if (error) return <h3>{error}</h3>;
+  if (loading) return <h2>Loading todos...</h2>;
+  if (error) return <h2>Error: {error}</h2>;
 
   return (
     <div>
-      <h2>Todos (Axios)</h2>
+      <h2>Todos</h2>
       {todos.map((todo) => (
-        <div key={todo.id}>
-          <p><b>Title:</b> {todo.title}</p>
-          <p><b>Status:</b> {todo.completed ? "Completed" : "Not Completed"}</p>
-          <hr />
-        </div>
+        <p key={todo.id}>
+          {todo.title} - {todo.completed ? "✔ Completed" : "❌ Not Completed"}
+        </p>
       ))}
     </div>
   );
